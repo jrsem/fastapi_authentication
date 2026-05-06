@@ -1,0 +1,11 @@
+## CREER VIRTUAL ENVIRONMENT:
+python3 -m venv venv
+
+## ACTIVER VIRTUAL ENVIRONMENT:
+source venv/bin/activate
+
+## INSTALLER LES DEPENDANCES:
+pip install -r requirements.txt
+
+## EXECUTER:
+fastapi dev main.py
