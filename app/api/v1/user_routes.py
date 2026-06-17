@@ -45,10 +45,6 @@ def get_all_users(current_user:User=Depends(get_current_active_user),db:Session=
     return db.query(User).all()
 
 
-@user_routes.get("/docteurs",response_model=list[userResponse])
-def get_all_docteurs(current_user:User=Depends(get_current_active_user),db:Session=Depends(get_session)):
-    return db.query(User).filter(User.role=="DOCTEUR")
-
 
 @user_routes.get("/{user_id}",response_model=userResponse)
 def get_user_by_id(user_id:uuid.UUID,current_user:User=Depends(get_current_active_user),db:Session=Depends(get_session)):
