@@ -50,4 +50,14 @@ class tokenSchema(BaseModel):
 
 class tokenResponseSchema(BaseModel):
     id: uuid.UUID = Field(primary_key=True)
-    username: Optional[str] = None
+    username: Optional[str] = None 
+
+class Update_userSchema(BaseModel):
+    username:str
+    name:str
+    phone:str
+    active:Optional[bool]=True
+    admin:Optional[bool]=False
+    role:UserRole=UserRole.USER
+    class config: 
+        from_attributes=True 

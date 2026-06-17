@@ -16,5 +16,8 @@ app.add_middleware(
     )
 
 from app.api.v1.auth_routes import auth_routes
+from app.api.v1.user_routes import user_routes
 
 app.include_router(auth_routes)
+
+app.include_router(user_routes)
